@@ -4,21 +4,6 @@
 [submodule "ocl"]
 	path = ocl
 	url = ../ocl.git
-[submodule "orogen"]
-	path = orogen
-	url = ../orogen.git
-[submodule "typelib"]
-	path = typelib
-	url = ../typelib.git
-[submodule "utilmm"]
-	path = utilmm
-	url = ../utilmm.git
-[submodule "utilrb"]
-	path = utilrb
-	url = ../utilrb.git
 [submodule "log4cpp"]
 	path = log4cpp
 	url = ../log4cpp.git
-[submodule "rtt_typelib"]
-	path = rtt_typelib
-	url = ../rtt_typelib.git
