@@ -13,18 +13,13 @@ This document explains how the [Orocos](http://www.orocos.org/) toolchain can be
 - [Binary packages](#binary-packages)
 	- [Ubuntu and Debian](#ubuntu-and-debian)
 - [Install from source](#install-from-source)
-	- [Build tools and dependencies](#build-tools-and-dependencies)
-		- [Debian/Ubuntu](#debianubuntu)
-		- [Other Linux distributions](#other-linux-distributions)
-		- [MacOS X](#macos-x)
-		- [Windows](#windows)
 	- [Quick start](#quick-start)
-	- [Download the sources](#download-the-sources)
-		- [Download source archive](#download-source-archive)
-		- [Clone from GitHub](#clone-from-github)
-	- [3. Build and Install](#3-build-and-install)
-- [Getting Started](#getting-started)
-- [Cross Compiling Orocos](#cross-compiling-orocos)
+		- [Resolving dependencies](#resolving-dependencies)
+		- [Installing](#installing)
+	- [Manual procedure](#manual-procedure)
+		- [1. Get the sources](#1-get-the-sources)
+		- [2. Build and Install](#2-build-and-install)
+- [Further info](#further-info)
 
 <!-- /TOC -->
 
@@ -85,7 +80,7 @@ Before proceeding you should resolve the dependencies.
 ##### Debian/Ubuntu
 If your operating system is Ubuntu, or another Debian-based Linux distribution which uses APT for package management, you can resolve the dependencies with the following command
 ```
-$ sudo apt-get install git cmake build-essential libboost-all-dev libreadline-dev  libeditline-dev libnetcdf-dev liblua5.1-dev libncurses5-dev
+$ sudo apt-get install git cmake build-essential libboost-all-dev libreadline-dev libnetcdf-dev liblua5.1-dev libncurses5-dev
 ```
 
 *Optional:* In case you want to build RTT with CORBA support, you also need to install the OmniORB (recommended) or TAO development packages:
@@ -100,26 +95,29 @@ sudo apt-get install omniorb omniidl omniorb-idl omniorb-nameserver libomniorb4-
 The procedure consists in the following steps:
 
 1. Create the folder and move to it
-```
-mkdir -p ~/orocos-toolchain &&  cd ~/orocos-toolchain
-```  
+   ```
+   mkdir -p ~/orocos-toolchain &&  cd ~/orocos-toolchain
+   ```  
 
 2. Download the script from the [there](https://raw.githubusercontent.com/meyerj/orocos_toolchain/installation-script/install.sh) and copy it into the folder previously created.
-If you are using a system that supports Wget you can do it from the terminal
-```
-wget https://raw.githubusercontent.com/meyerj/orocos_toolchain/installation-script/install.sh
-```
+
+   If you are using a system that supports Wget you can do it from the terminal
+
+   ```
+   wget https://raw.githubusercontent.com/meyerj/orocos_toolchain/installation-script/install.sh
+   ```
 
 3. Give permission to run the script
-If you are using Debian/Ubuntu
-```
-chmod +x ./install.sh
-```
+
+   If you are using Debian/Ubuntu
+   ```
+   chmod +x ./install.sh
+   ```
 
 5. Run the script
-```
-sudo ./install.sh
-```
+   ```
+   sudo ./install.sh
+   ```
 
 **Notes**
 If you desire to install orocos with some additional features you can check available possibilities
@@ -131,8 +129,10 @@ running
 ### Manual procedure
 
 #### 1. Get the sources
+
 To get the sources there are two possibilities:
-##### Download the archive
+   
+#### Download the archive
 
 The latest released version of the toolchain can be downloaded from here:
 http://www.orocos.org/orocos/toolchain
@@ -145,11 +145,11 @@ tar xvjf orocos-toolchain-2.x.x-src.tar.bz2
 cd orocos-toolchain-*
 ```
 
-Note that the archive files provided by GitHub at https://github.com/orocos-toolchain/orocos_toolchain/releases will not work as the repository contains submodules, which are unfortunately not included in the files.
+Note that the archive files provided by GitHub at https://github.com/orocos-toolchain/orocos_toolchain/releases will not    work as the repository contains submodules, which are unfortunately not included in the files.
 
-##### Clone from GitHub
+#### Clone from GitHub
 
-If you want to use the latest development version or actively contribute to Orocos, it is recommended to clone the toolchain directly from GitHub:
+If you want to use the latest development version or actively contribute to Orocos, it is recommended to clone the    toolchain directly from GitHub:
 
 ```
 mkdir -p ~/orocos-toolchain && cd ~/orocos-toolchain
@@ -169,9 +169,9 @@ The `--recursive` argument is required because the toolchain GIT repository uses
 
 #### 2. Build and Install
 
-All toolchain packages rely on cmake as the underlying build tool, but every package has to be configured, build and installed in isolation.
-Advanced users can invoke cmake and make directly or use [catkin](http://wiki.ros.org/catkin) or [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/) as a build tool.
-Otherwise it is recommended to use the `install.sh` script provided in the toolchain repository, which iterates over all toolchain packages in the right order and invokes cmake, make and make install within the `build/<package>` directory for each of them.
+   All toolchain packages rely on cmake as the underlying build tool, but every package has to be configured, build and installed in isolation.
+   Advanced users can invoke cmake and make directly or use [catkin](http://wiki.ros.org/catkin) or [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/) as a build tool.
+   Otherwise it is recommended to use the `install.sh` script provided in the toolchain repository, which iterates over all toolchain packages in the right order and invokes cmake, make and make install within the `build/<package>` directory for each of them.
 
 ## Further info 
 
