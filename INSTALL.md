@@ -80,7 +80,7 @@ Before proceeding you should resolve the dependencies.
 ##### Debian/Ubuntu
 If your operating system is Ubuntu, or another Debian-based Linux distribution which uses APT for package management, you can resolve the dependencies with the following command
 ```
-$ sudo apt-get install git cmake build-essential libboost-all-dev libreadline-dev libnetcdf-dev liblua5.1-dev libncurses5-dev
+sudo apt-get install git cmake build-essential libboost-all-dev libreadline-dev libnetcdf-dev liblua5.1-dev libncurses5-dev
 ```
 
 *Optional:* In case you want to build RTT with CORBA support, you also need to install the OmniORB (recommended) or TAO development packages:
