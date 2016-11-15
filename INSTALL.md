@@ -99,7 +99,7 @@ The procedure consists in the following steps:
    mkdir -p ~/orocos-toolchain &&  cd ~/orocos-toolchain
    ```  
 
-2. Download the script from the [there](https://raw.githubusercontent.com/meyerj/orocos_toolchain/installation-script/install.sh) and copy it into the folder previously created.
+2. Download the script from the [there](https://raw.githubusercontent.com/meyerj/orocos_toolchain/installation-script/install.sh) and copy it into the previously created folder.
 
    If you are using a system that supports Wget you can do it from the terminal
 
